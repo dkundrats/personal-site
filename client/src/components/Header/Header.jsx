@@ -1,0 +1,51 @@
+import { useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
+import './Header.css'
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  return (
+    <header className="header">
+      <div className="container">
+        <div className="header-wrapper">
+          <div className="logo">
+            <Link to="/">
+              <h2>Portfolio</h2>
+            </Link>
+          </div>
+
+          <div className={`navigation ${isMenuOpen ? 'active' : ''}`}>
+            <nav className="menu">
+              <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
+                Home
+              </NavLink>
+              <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>
+                About
+              </NavLink>
+              <NavLink to="/portfolio" className={({ isActive }) => isActive ? 'active' : ''}>
+                Portfolio
+              </NavLink>
+              <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>
+                Contact
+              </NavLink>
+            </nav>
+          </div>
+
+          <div className="header-right">
+            <a href="#" className="btn btn-primary">Download CV</a>
+            <div className="mobile-menu-btn" onClick={toggleMenu}>
+              <span className={isMenuOpen ? 'active' : ''}></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  )
+}
+
+export default Header

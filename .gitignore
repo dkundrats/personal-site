@@ -1,0 +1,35 @@
+# Rust
+/api/target/
+/api/Cargo.lock
+**/*.rs.bk
+*.pdb
+
+# Node.js/React
+/client/node_modules/
+/client/.pnp
+/client/.pnp.js
+/client/coverage
+/client/build
+/client/dist
+/client/.env.local
+/client/.env.development.local
+/client/.env.test.local
+/client/.env.production.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
