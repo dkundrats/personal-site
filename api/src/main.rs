@@ -1,13 +1,28 @@
+pub mod handlers;
+pub mod state;
+pub mod config;
 use axum::{
     routing::get,
     Router,
 };
+use state::AppState;
+use dotenv::dotenv;
 
 #[tokio::main]
 async fn main() {
-    // build our application with a single route
+    dotenv().ok();
+    
+    // init app state with s3 client
+    let app_state = match AppState::new().await {
+	Ok(state) => state,
+	Err(e) => {
+	    eprint!("Failed to initalize AppState: {}", e);
+	    std::process::exit(1); 
+	} 
+    }; 
+    // build out app with routes
     let app = Router::new()
-	.route("/", get(|| async { "Hello, World!" }));
+	.route("/", get(|| async { "Hello, World!" })).with_state(app_state);
     // run our app with hyper, listening globally on port 3000
     let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
     println!("Listening on 127.0.0.1:3000");
