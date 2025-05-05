@@ -69,15 +69,13 @@
     align-items: center;
 }
 
-.profile-image-placeholder {
+.profile-image {
     width: 350px;
     height: 350px;
     border-radius: 50%;
     background-color: #e0e0e0;
-    position: relative;
-    overflow: hidden;
+    object-fit: cover;
 }
-
 /* Skills Section */
 .skills-section {
     padding: 80px 0;

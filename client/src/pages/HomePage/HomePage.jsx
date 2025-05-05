@@ -10,16 +10,25 @@ const HomePage = () => {
           <div className="hero-content">
             <h1>Hi, I'm <span className="highlight">David</span></h1>
             <h2>Machine Learning Engineer</h2>
-            <p>I build exceptional and accessible digital experiences for the web.</p>
+            <p>Building intelligent systems at the intersection of AI engineering and cloud architecture.</p>
             <div className="hero-buttons">
               <Link to="/portfolio" className="btn btn-primary">View My Work</Link>
               <Link to="/contact" className="btn btn-secondary">Contact Me</Link>
             </div>
-          </div>
-          <div className="hero-image">
-            {/* Placeholder for profile image */}
-            <div className="profile-image-placeholder"></div>
-          </div>
+		</div>
+		<div className="hero-image">
+		    <img 
+			src="http://localhost:3000/pfp" 
+			alt="Profile" 
+			className="profile-image" 
+			onError={(e) => {
+			    e.target.onerror = null;
+			    // Just hide the image on error
+			    e.target.style.display = 'none';
+			    console.error("Failed to load profile image");
+			}}
+		    />
+		</div>
         </div>
       </section>
 
@@ -100,14 +109,11 @@ const HomePage = () => {
 
 // Sample data for skills
 const skills = [
-  { name: "React", icon: "🔵" },
-  { name: "JavaScript", icon: "🟡" },
-  { name: "TypeScript", icon: "🔷" },
-  { name: "Node.js", icon: "🟢" },
+  { name: "Python", icon: "🔵" },
   { name: "Rust", icon: "🦀" },
-  { name: "CSS/SASS", icon: "🎨" },
-  { name: "HTML", icon: "📄" },
-  { name: "Git", icon: "🔄" }
+  { name: "JavaScript", icon: "🟡" },
+  { name: "Azure", icon: "🟢" },
+  { name: "AWS", icon: "🎨" },
 ];
 
 // Sample data for featured projects
