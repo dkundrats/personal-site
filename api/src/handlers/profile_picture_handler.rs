@@ -7,7 +7,7 @@ use std::sync::Arc;
 use crate::state::AppState;
 use std::env;
 
-async fn get_profile_picture(
+pub async fn get_profile_picture(
     State(state): State<Arc<AppState>>,
 ) -> impl IntoResponse {
     let key = match  env::var("PROFILE_JPG_NAME") {
