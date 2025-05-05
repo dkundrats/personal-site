@@ -12,11 +12,11 @@ pub async fn get_profile_picture(
 ) -> impl IntoResponse {
     let key = match  env::var("PROFILE_JPG_NAME") {
 	Ok(name) => name,
-	Err(_) => return (StatusCode::INTERNAL_SERVER_ERROR, "Missing profile picture env var").into_response(), 
+	Err(_) => return (StatusCode::INTERNAL_SERVER_ERROR, "Missing profile picture env var\n").into_response(), 
     };
     let bucket_name = match env::var("BUCKET_NAME") {
 	Ok(bucket) => bucket,
-	Err(_) => return (StatusCode::INTERNAL_SERVER_ERROR, "Missing bucket env var").into_response()
+	Err(_) => return (StatusCode::INTERNAL_SERVER_ERROR, "Missing bucket env var\n").into_response()
     }; 
 
     match state.s3_client.get_object()
@@ -41,7 +41,7 @@ pub async fn get_profile_picture(
 		}
 	    },
 	    Err(err) => {
-		(StatusCode::NOT_FOUND, format!("Image not found: {}", err)).into_response()
+		(StatusCode::NOT_FOUND, format!("Image not found: {}\n", err)).into_response()
 		 
 	    }
 	} 
