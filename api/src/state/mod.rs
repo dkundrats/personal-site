@@ -14,12 +14,9 @@ impl AppState {
         // Load config from environment variables (which should now include those from .env)
         let config = aws_config::from_env().load().await;
         let s3_client = Arc::new(S3Client::new(&config));
-        
+
         let cache = Arc::new(RwLock::new(HashMap::new()));
-         
-        Ok(Self {
-            s3_client,
-            cache
-        })
+
+        Ok(Self { s3_client, cache })
     }
 }
