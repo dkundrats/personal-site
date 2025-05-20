@@ -3,6 +3,7 @@ pub mod state;
 use axum::{routing::get, Router};
 use dotenv::dotenv;
 use handlers::profile_picture_handler::get_profile_picture;
+use handlers::resume_handler::get_resume;
 use state::AppState;
 use std::sync::Arc;
 
@@ -21,6 +22,7 @@ async fn main() {
     let app = Router::new()
         .route("/", get(|| async { "Hello, World!" }))
         .route("/pfp", get(get_profile_picture))
+        .route("/resume", get(get_resume))
         .with_state(app_state);
 
     // run our app with hyper, listening globally on port 3000
