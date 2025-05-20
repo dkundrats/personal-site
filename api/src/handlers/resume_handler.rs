@@ -11,21 +11,23 @@ pub async fn get_resume(State(state): State<Arc<AppState>>) -> impl IntoResponse
     let key = match env::var("RESUME_NAME") {
         Ok(name) => name,
         Err(_) => {
+            println!("Missing pfp name env var");
             return (
                 StatusCode::INTERNAL_SERVER_ERROR,
                 "Missing resume title env var\n",
             )
-                .into_response()
+                .into_response();
         }
     };
     let bucket_name = match env::var("BUCKET_NAME") {
         Ok(name) => name,
         Err(_) => {
+            println!("Missing bucket name env var");
             return (
                 StatusCode::INTERNAL_SERVER_ERROR,
                 "Missing bucket name env var",
             )
-                .into_response()
+                .into_response();
         }
     };
     match state
@@ -41,8 +43,20 @@ pub async fn get_resume(State(state): State<Arc<AppState>>) -> impl IntoResponse
             match data {
                 Ok(data) => {
                     let bytes = data.into_bytes();
-                    let content_type = response.content_type.unwrap_or_else(|| "pdf".to_string());
-                    ([(header::CONTENT_TYPE, content_type)], bytes).into_response()
+                    let content_type = response
+                        .content_type
+                        .unwrap_or_else(|| "application/pdf".to_string());
+                    (
+                        [
+                            (header::CONTENT_TYPE, content_type),
+                            (
+                                header::CONTENT_DISPOSITION,
+                                "attachment; filename=\"dkundrats_resume.pdf\"".to_string(),
+                            ),
+                        ],
+                        bytes,
+                    )
+                        .into_response()
                 }
                 Err(err) => (
                     StatusCode::INTERNAL_SERVER_ERROR,
