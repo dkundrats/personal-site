@@ -37,8 +37,8 @@ const Header = () => {
           </div>
 
           <div className="header-right">
-            <a href="#" className="btn btn-primary">Download CV</a>
-            <div className="mobile-menu-btn" onClick={toggleMenu}>
+              <a href="http://127.0.0.1:3000/resume" className="btn btn-primary" download="dkundrats_resume.pdf">Download CV</a>
+              <div className="mobile-menu-btn" onClick={toggleMenu}>
               <span className={isMenuOpen ? 'active' : ''}></span>
             </div>
           </div>

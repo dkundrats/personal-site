@@ -18,7 +18,7 @@ const HomePage = () => {
 		</div>
 		<div className="hero-image">
 		    <img 
-			src="http://localhost:3000/pfp" 
+			src="http://127.0.0.1:3000/pfp" 
 			alt="Profile" 
 			className="profile-image" 
 			onError={(e) => {

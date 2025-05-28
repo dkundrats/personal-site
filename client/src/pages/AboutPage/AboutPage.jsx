@@ -58,7 +58,7 @@ const AboutPage = () => {
                   <span>5+ Years</span>
                 </div>
               </div>
-              <a href="#" className="btn btn-primary">Download Resume</a>
+              <a href="http://localhost:3000/resume" className="btn btn-primary">Download Resume</a>
             </div>
           </div>
         </div>
