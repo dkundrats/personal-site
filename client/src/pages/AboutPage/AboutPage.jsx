@@ -18,44 +18,49 @@ const AboutPage = () => {
         <div className="container">
           <div className="bio-grid">
             <div className="bio-image">
-              {/* Placeholder for bio image */}
-              <div className="bio-image-placeholder"></div>
+            <img 
+    src="http://127.0.0.1/pfp"/>
+    <div className="bio-image-placeholder"></div>
             </div>
             <div className="bio-content">
               <h2>My Journey</h2>
-              <p>
-                I'm a passionate Full Stack Developer with a love for creating elegant, 
-                efficient, and user-friendly applications. With several years of experience 
-                in web development, I specialize in building modern web applications using 
-                cutting-edge technologies.
-              </p>
-              <p>
-                My journey in programming began when I was in college, where I discovered 
-                my passion for solving problems through code. Since then, I've worked on 
-                numerous projects, ranging from simple websites to complex web applications, 
-                always striving to improve my skills and learn new technologies.
-              </p>
-              <p>
-                I believe in writing clean, maintainable code and creating applications 
-                that not only meet the technical requirements but also provide an 
-                exceptional user experience.
-              </p>
+             <p>
+            I'm a passionate AI / ML Engineer specializing in agentic workflows and advanced 
+ natural language processing systems. With several years of experience building 
+ intelligent agents and conversational AI, I excel at designing RAG pipelines, 
+ multi-agent systems, and LLM-powered applications using cutting-edge frameworks.
+</p>
+<p>
+ My journey into AI began during college, where I discovered my passion for creating 
+ autonomous systems that can reason, plan, and execute complex tasks. Since then, I've 
+ developed sophisticated agentic architectures, from retrieval-augmented generation systems 
+ to multi-modal AI agents, constantly exploring the frontiers of prompt engineering, 
+ fine-tuning, and emergent AI capabilities.
+</p>
+<p>
+ I believe in building robust, scalable agent frameworks and crafting AI solutions 
+ that not only demonstrate technical excellence in areas like vector databases, 
+ semantic search, and tool-calling, but also deliver transformative automation 
+ and intelligent decision-making capabilities for real-world applications.
+</p>
+   
+              
               <div className="bio-details">
                 <div className="bio-detail">
                   <strong>Name:</strong>
-                  <span>David Smith</span>
+                  <span>David Kundrats</span>
                 </div>
                 <div className="bio-detail">
                   <strong>Email:</strong>
-                  <span>david@example.com</span>
+                  <span>dkundrats@proton.me</span>
                 </div>
                 <div className="bio-detail">
                   <strong>Location:</strong>
-                  <span>New York, USA</span>
+                  <span>Asbury Park, NJ, USA</span>
                 </div>
                 <div className="bio-detail">
                   <strong>Experience:</strong>
-                  <span>5+ Years</span>
+                  <span>3 Years</span>
                 </div>
               </div>
               <a href="http://localhost:3000/resume" className="btn btn-primary">Download Resume</a>
@@ -143,22 +148,22 @@ const AboutPage = () => {
 // Sample data for work experience
 const workExperience = [
   {
-    position: "Senior Full Stack Developer",
-    company: "Tech Solutions Inc.",
-    period: "2022 - Present",
-    description: "Lead development of web applications using React, Node.js, and AWS. Collaborate with cross-functional teams to deliver high-quality software solutions."
+    position: "Gen AI Engineer",
+    company: "Anika Systems Inc.",
+    period: "March 2024 - Present",
+    description:"Develop and maintain scalable, production ready LLM powered applications utilizing agentic workflows and RESTful APIs. Develop and deploy containerized (Docker) microservices that LLM Agents utilize to assist in their workflows." 
   },
   {
-    position: "Full Stack Developer",
-    company: "Digital Innovations",
-    period: "2019 - 2022",
-    description: "Developed responsive web applications using modern JavaScript frameworks. Implemented RESTful APIs and database solutions."
+    position: "Research Assitant",
+    company: "Monmouth University",
+    period: "September 2023 - January 2024",
+    description: "Conduct research concerning video generation and frame synchronization leveraging DNN and GAN models."
   },
   {
-    position: "Junior Web Developer",
-    company: "Web Crafters",
-    period: "2017 - 2019",
-    description: "Assisted in building websites and web applications. Gained experience in front-end development and version control systems."
+    position: "Corporate IT Automation",
+    company: "HFA Public Accountants",
+    period: "March 2023 - February 2024",
+    description: "Automate document processing workflows in an Azure Cloud enviornment, extracting structured data from finanical documents and spreadsheets through RESTful APIs"
   }
 ];
 
@@ -166,15 +171,15 @@ const workExperience = [
 const education = [
   {
     degree: "Master of Computer Science",
-    institution: "Tech University",
-    period: "2015 - 2017",
-    description: "Specialized in software engineering and web technologies. Completed thesis on modern JavaScript frameworks."
+    institution: "Monmouth University",
+    period: "2021 - 2024",
+    description: "Specialized in Machine Learning and Computer Vision. Graduate research was oriented around utilizing transformers and GAN models to generate lip synchronization videos."
   },
   {
-    degree: "Bachelor of Computer Science",
-    institution: "State University",
-    period: "2011 - 2015",
-    description: "Studied programming fundamentals, algorithms, data structures, and web development."
+    degree: "Bachelor of Science, Business Administration",
+    institution: "Monmouth University",
+    period: "2015 - 2019",
+    description: ""
   }
 ];
 

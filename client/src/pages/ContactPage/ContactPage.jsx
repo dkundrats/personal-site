@@ -81,7 +81,7 @@ const ContactPage = () => {
                   <div className="contact-icon">📧</div>
                   <div className="contact-details">
                     <h3>Email</h3>
-                    <p>david@example.com</p>
+                    <p>dkundrats@proton.me</p>
                   </div>
                 </div>
                 
@@ -89,7 +89,7 @@ const ContactPage = () => {
                   <div className="contact-icon">📱</div>
                   <div className="contact-details">
                     <h3>Phone</h3>
-                    <p>+1 (555) 123-4567</p>
+                    <p>Available at request</p>
                   </div>
                 </div>
                 
@@ -97,7 +97,7 @@ const ContactPage = () => {
                   <div className="contact-icon">📍</div>
                   <div className="contact-details">
                     <h3>Location</h3>
-                    <p>New York, NY, USA</p>
+                    <p>Asbury Park, NJ, USA</p>
                   </div>
                 </div>
               </div>
@@ -105,16 +105,13 @@ const ContactPage = () => {
               <div className="social-links">
                 <h3>Connect with Me</h3>
                 <div className="socials">
-                  <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="social-link">
+                  <a href="https://github.com/dkundrats" target="_blank" rel="noopener noreferrer" className="social-link">
                     GitHub
                   </a>
-                  <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="social-link">
+                  <a href="https://www.linkedin.com/in/david-kundrats/" target="_blank" rel="noopener noreferrer" className="social-link">
                     LinkedIn
                   </a>
-                  <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="social-link">
-                    Twitter
-                  </a>
-                </div>
+                  </div>
               </div>
             </div>
             
